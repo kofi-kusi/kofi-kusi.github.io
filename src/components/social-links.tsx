@@ -7,7 +7,7 @@ export default function SocialIcons() {
     <ul className="flex gap-8">
       <li className="p-0 sm:p-2">
         <Link
-          href="https://x.com/_kofi_kusi"
+          href="https://x.com/kmeanskusi"
           target="_blank"
           aria-label="Twitter profile"
           className="twitter-icon flex items-center justify-center transition-all duration-300 hover:rotate-[15deg] hover:text-[#1DA1F2]"
