@@ -65,9 +65,9 @@ export default function Status() {
         <CustomList>
           <CustomListItem>
             View my{" "}
-            <Link href="/resume.pdf" prefetch={false}>
+            <a href="/resume.pdf">
               resume
-            </Link>
+            </a>
             .
           </CustomListItem>
         </CustomList>

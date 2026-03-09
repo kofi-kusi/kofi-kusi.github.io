@@ -16,12 +16,12 @@ export default function Header() {
         </h1>
         <div className="flex gap-4 items-center">
           <ThemeToggle />
-          <Link href="/resume.pdf" className="hover:text-primary-hover">
+          <a href="/resume.pdf" className="hover:text-primary-hover">
             <div className="flex items-center gap-2 border-2 border-primary rounded-md px-3 py-1 text-sm transition-all duration-300 hover:border-primary hover:shadow-[0_0_12px_rgba(0,85,255,0.2)]">
               <FileUser size={14} />
               Resume
             </div>
-          </Link>
+          </a>
         </div>
       </div>
 
