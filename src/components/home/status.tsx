@@ -7,27 +7,33 @@ export default function Status() {
       <section className="my-4">
         <CustomList>
           <CustomListItem>
-            <p className="font-bold text-primary">Currently:</p>
+            <p className="font-bold">Currently:</p>
           </CustomListItem>
+
           <CustomListItem isSubItem>
             Studying CS @{" "}
             <Link href="https://kstu.edu.gh" target="_blank">
               Kumasi Technical University
             </Link>
           </CustomListItem>
+
           <CustomListItem isSubItem>
-            Learning stuff on @{" "}
-            <Link href="https://oreilly.com" target="_blank">
-              O&apos;Reilly
-            </Link>
-          </CustomListItem>
-          <CustomListItem isSubItem>
-            Reading <BookText size={16} className="inline"/>:
+            Reading <BookText size={16} className="inline"/>:{" "}
             <Link
               href="https://learning.oreilly.com/library/view/hands-on-machine-learning/9798341607972/"
               target="_blank"
               >
               Hands-On Machine Learning with Scikit-Learn and PyTorch
+            </Link>
+          </CustomListItem>
+
+          <CustomListItem isSubItem>
+            Reading <BookText size={16} className="inline"/>:{" "}
+            <Link
+              href="https://learning.oreilly.com/library/view/fundamentals-of-devops/9781098174583/"
+              target="_blank"
+              >
+              Fundamentals of DevOps and Software Delivery
             </Link>
           </CustomListItem>
         </CustomList>
@@ -36,7 +42,7 @@ export default function Status() {
       <section className="my-4">
         <CustomList>
           <CustomListItem>
-            <p className="font-bold text-primary">Recently:</p>
+            <p className="font-bold">Recently:</p>
           </CustomListItem>
           <CustomListItem isSubItem>
             Software Developer intern @{" "}
