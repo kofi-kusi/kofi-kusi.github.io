@@ -1,9 +1,8 @@
-import Status from "@/components/home/status";
 
 export default function Home() {
   return (
     <div>
-      <Status />
+      <h2 className="text-2xl font-bold mb-4">Welcome to my portfolio!</h2>
     </div>
   );
 }
