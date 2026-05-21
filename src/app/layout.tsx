@@ -1,35 +1,65 @@
-import type { Metadata } from "next";
-import { Anonymous_Pro } from "next/font/google";
-
-const anonymousPro = Anonymous_Pro({
-  variable: "--font-anonymous-pro",
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
+// @ts-expect-error -- Next.js handles global CSS side-effect imports at build time
+import './global.css'
+import type { Metadata } from 'next'
+import { Geist } from 'next/font/google'
+import { Navbar } from './components/nav'
+import Footer from './components/footer'
+import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: {
-    template: "%s | Kofi Kusi",
-    default: "Kofi Kusi Appau",
+    default: 'Kofi Kusi Appau',
+    template: '%s | Kofi Kusi',
   },
-  description: "Kofi Kusi's portfolio. View my projects and other works!",
-};
+  description: 'This is my portfolio.',
+  openGraph: {
+    title: 'My Portfolio',
+    description: 'This is my portfolio.',
+    url: baseUrl,
+    siteName: 'My Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
+
+const cx = (...classes: (string | undefined | false)[]): string => classes.filter(Boolean).join(' ')
+
+const geist = Geist({
+  subsets: ['latin'],
+})
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html>
-
-      <body className={`${anonymousPro.variable}`}>
-        <div className="max-w-xl mx-auto mt-10 px-4">
-          <main>{children}</main>
-        </div>
+    <html
+      lang="en"
+      className={cx(
+        'text-black bg-white dark:text-white dark:bg-black',
+        geist.className,
+      )}
+    >
+      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+          <Navbar />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
-  );
+  )
 }
