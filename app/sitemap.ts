@@ -1,6 +1,6 @@
 import { getBlogPosts } from "@/writing/utils";
 
-export const baseUrl = "https://localhost:3000";
+export const baseUrl = "https://kofi-kusi.me";
 
 export default async function sitemap() {
   const blogs = getBlogPosts().map((post) => ({
