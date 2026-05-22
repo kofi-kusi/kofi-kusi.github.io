@@ -12,8 +12,7 @@ export default function Page() {
           </h1>
           <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400 space-y-4">
             <p>
-              I am currently a final year CS student at Kumasi Technical
-              University.
+              I am currently a final year CS student.
             </p>
             <p>I grew up in Kumasi, Ghana.</p>
             <p>I play LinkedIn puzzle games every day.</p>
