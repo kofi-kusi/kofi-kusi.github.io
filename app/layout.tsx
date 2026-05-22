@@ -1,5 +1,4 @@
-// @ts-expect-error -- Next.js handles global CSS side-effect imports at build time
-import './global.css'
+import "@/global.css"
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono } from 'next/font/google'
 import { Navbar } from './components/nav'
