@@ -1,7 +1,7 @@
 // @ts-expect-error -- Next.js handles global CSS side-effect imports at build time
 import './global.css'
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { IBM_Plex_Mono } from 'next/font/google'
 import { Navbar } from './components/nav'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
@@ -36,8 +36,10 @@ export const metadata: Metadata = {
 
 const cx = (...classes: (string | undefined | false)[]): string => classes.filter(Boolean).join(' ')
 
-const geist = Geist({
+const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
+  variable: '--font-ibm-plex-mono',
+  weight: ['400', '500', '600', '700'],
 })
 
 export default function RootLayout({
@@ -50,7 +52,7 @@ export default function RootLayout({
       lang="en"
       className={cx(
         'text-black bg-white dark:text-white dark:bg-black',
-        geist.className,
+        ibmPlexMono.className,
       )}
     >
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">

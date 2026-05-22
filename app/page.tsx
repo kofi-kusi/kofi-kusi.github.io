@@ -1,0 +1,108 @@
+import { BlogPosts } from "@/components/posts";
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Page() {
+  return (
+    <section>
+      <div className="flex flex-col-reverse md:flex-row gap-2">
+        <div className="">
+          <h1 className="font-bold text-2xl md:text-4xl tracking-tight mb-8 text-black dark:text-white transition-opacity duration-600  opacity-100 ease-in ">
+            Kofí Kusí Appau
+          </h1>
+          <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400 space-y-4">
+            <p>
+              I am currently a final year CS student at Kumasi Technical
+              University.
+            </p>
+            <p>I grew up in Kumasi, Ghana.</p>
+            <p>I play LinkedIn puzzle games every day.</p>
+            <p className="flex items-center gap-1">
+              And i am a red devil
+              <span>
+                <Image
+                  src="manchester_united.png"
+                  alt="Manchester United"
+                  width={20}
+                  height={20}
+                />
+              </span>
+            </p>
+
+            <p>I am broadly insterested in:</p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                Software development, with a focus on web and mobile
+                applications.
+              </li>
+              <li>Artificial intelligence and machine learning.</li>
+              <li>Open source software and community building.</li>
+            </ul>
+            <p className="mt-8">
+              <span>
+                {" "}
+                <div className="h-px w-8 bg-neutral-600 dark:text-neutral-400"></div>
+              </span>{" "}
+              thank you for visiting and take care!
+            </p>
+          </div>
+        </div>
+        <div className="w-full md:w-2/3">
+          <div className="relative">
+            <div className="absolute inset-0 bg-green-200"></div>
+            <Image
+              src="/me-monochrome.png"
+              alt="Profile picture"
+              className="mb-4 w-full opacity-50"
+              width={200}
+              height={200}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className={
+          "dark:text-gray-400 max-w-2xl mx-auto w-full mt-10 mb-10 transition-opacity delay-1400 duration-1000 justify-center items-center h-5 border-b-1px border-gray-400 dark:border-gray-500 text-2xl text-center "
+        }
+      >
+        <span className="bg-amber-50 dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
+          <Link href="https://d3l-n3st.vercel.app/prev">
+            <span className="inline-block rotate-180 relative ">
+              ➢
+            </span>
+          </Link>
+          <Link href="https://d3l-n3st.vercel.app/">✵</Link>
+          <Link
+            href="https://d3l-n3st.vercel.app/next"
+            className=" inline-block  relative "
+          >
+            ➢
+          </Link>
+        </span>
+        <hr />
+      </div>
+      <video src="/ascii-donut.mp4" autoPlay loop muted className="w-full mb-10" />
+      <div className="my-8">
+        <div className="flex gap-2 items-center">
+
+          <div className="w-8 h-px bg-amber-50"> 
+        </div>
+        <span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          className="w-6 h-6 fill-black  hover:fill-gray-400  dark:fill-white  dark:hover:fill-gray-400 transition-colors duration-300"
+        >
+          <path
+            fillRule="evenodd"
+            d="M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+            clipRule="evenodd"
+          />
+        </svg>
+        </span>
+        </div>
+        <BlogPosts />
+      </div>
+    </section>
+  );
+}
