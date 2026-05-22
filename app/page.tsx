@@ -67,9 +67,7 @@ export default function Page() {
       >
         <span className="bg-amber-50 dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
           <Link href="https://d3l-n3st.vercel.app/prev">
-            <span className="inline-block rotate-180 relative ">
-              ➢
-            </span>
+            <span className="inline-block rotate-180 relative ">➢</span>
           </Link>
           <Link href="https://d3l-n3st.vercel.app/">✵</Link>
           <Link
@@ -81,25 +79,36 @@ export default function Page() {
         </span>
         <hr />
       </div>
-      <video src="/ascii-donut.mp4" autoPlay loop muted className="w-full mb-10" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        disablePictureInPicture
+        controls={false}
+        preload="auto"
+        aria-hidden="true"
+        className="w-full mb-10 pointer-events-none select-none"
+      >
+        <source src="/ascii-donut.webm" type="video/webm" />
+        <source src="/ascii-donut.mp4" type="video/mp4" />
+      </video>
       <div className="my-8">
         <div className="flex gap-2 items-center">
-
-          <div className="w-8 h-px bg-amber-50"> 
-        </div>
-        <span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          className="w-6 h-6 fill-black  hover:fill-gray-400  dark:fill-white  dark:hover:fill-gray-400 transition-colors duration-300"
-        >
-          <path
-            fillRule="evenodd"
-            d="M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
-            clipRule="evenodd"
-          />
-        </svg>
-        </span>
+          <div className="w-8 h-px bg-amber-50"></div>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6 fill-black  hover:fill-gray-400  dark:fill-white  dark:hover:fill-gray-400 transition-colors duration-300"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3.75 4.5a.75.75 0 01.75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 01-.75.75h-.75a.75.75 0 01-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 01-.75-.75V4.5zm0 6.75a.75.75 0 01.75-.75h.75a8.25 8.25 0 018.25 8.25v.75a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75v-.75a6 6 0 00-6-6H4.5a.75.75 0 01-.75-.75v-.75zm0 7.5a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </span>
         </div>
         <BlogPosts />
       </div>
