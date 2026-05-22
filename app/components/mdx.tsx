@@ -58,7 +58,7 @@ function Code({ children, ...props }: any) {
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function slugify(str) {
+function slugify(str: string) {
   return str
     .toString()
     .toLowerCase()
@@ -69,9 +69,9 @@ function slugify(str) {
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
-    const slug = slugify(children)
+function createHeading(level: number) {
+  const Heading: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const slug = slugify(String(children))
     return React.createElement(
       `h${level}`,
       { id: slug },
@@ -104,7 +104,7 @@ const components = {
   Table,
 }
 
-export function CustomMDX(props) {
+export function CustomMDX(props: any) {
   return (
     <MDXRemote
       {...props}
