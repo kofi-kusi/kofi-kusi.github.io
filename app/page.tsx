@@ -22,7 +22,7 @@ export default function Page() {
                   src="manchester_united.webp"
                   alt="Manchester United"
                   width={20}
-                  height={20}cwebp -q 80 input.png -o output.webp   
+                  height={20}  
                 />
               </span>
             </p>
