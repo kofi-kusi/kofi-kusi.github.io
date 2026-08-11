@@ -1,6 +1,5 @@
 import { BlogPosts } from "@/components/posts";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Page() {
   return (
@@ -31,32 +30,28 @@ export default function Page() {
             <p>I am broadly insterested in:</p>
             <ul className="list-disc pl-5 space-y-2">
               <li>
-                Software development, with a focus on web and mobile
-                applications.
+                Software engineering and web development.
               </li>
               <li>Artificial intelligence and machine learning.</li>
               <li>Open source software and community building.</li>
             </ul>
-            <p className="mt-8">
+            <div className="flex items-center mt-8 gap-4">
               <span>
                 {" "}
                 <div className="h-px w-8 bg-neutral-600 dark:text-neutral-400"></div>
               </span>{" "}
               thank you for visiting and take care!
-            </p>
+            </div>
           </div>
         </div>
-        <div className="w-full md:w-2/3">
-          <div className="relative">
-            <div className="absolute inset-0 bg-green-200"></div>
+        <div className="w-full md:w-2/3 rounded-2xl">
             <Image
               src="/me-monochrome.png"
               alt="Profile picture"
-              className="mb-4 w-full opacity-50"
+              className="mb-4 w-full opacity-50 rounded-2xl"
               width={200}
               height={200}
             />
-          </div>
         </div>
       </div>
       <div
@@ -64,17 +59,16 @@ export default function Page() {
           "dark:text-gray-400 max-w-2xl mx-auto w-full mt-10 mb-10 transition-opacity delay-1400 duration-1000 justify-center items-center h-5 border-b-1px border-gray-400 dark:border-gray-500 text-2xl text-center "
         }
       >
-        <span className="bg-amber-50 dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
-          <Link href="https://d3l-n3st.vercel.app/prev">
+        <span className="dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
+          <div>
             <span className="inline-block rotate-180 relative ">➢</span>
-          </Link>
-          <Link href="https://d3l-n3st.vercel.app/">✵</Link>
-          <Link
-            href="https://d3l-n3st.vercel.app/next"
+          </div>
+          <div>✵</div>
+          <div
             className=" inline-block  relative "
           >
             ➢
-          </Link>
+          </div>
         </span>
         <hr />
       </div>
@@ -94,7 +88,7 @@ export default function Page() {
       </video>
       <div className="my-8">
         <div className="flex gap-2 items-center">
-          <div className="w-8 h-px bg-amber-50"></div>
+          <div className="w-8 h-px bg-black"></div>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

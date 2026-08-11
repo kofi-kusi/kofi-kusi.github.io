@@ -13,17 +13,14 @@ export default function Footer() {
           "dark:text-gray-400 max-w-2xl mx-auto w-full mt-10 mb-10 transition-opacity delay-1400 duration-1000 flexjustify-center items-center h-5 border-b-1px border-gray-400 dark:border-gray-500 text-2xl text-center "
         }
       >
-        <span className="bg-amber-50 dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
-          <Link href="https://d3l-n3st.vercel.app/prev">
+        <span className="dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
             <span className="inline-block rotate-180 relative ">➢</span>
-          </Link>
-          <Link href="https://d3l-n3st.vercel.app/">✵</Link>
-          <Link
-            href="https://d3l-n3st.vercel.app/next"
+          <div>✵</div>
+          <div
             className=" inline-block  relative "
           >
             ➢
-          </Link>
+          </div>
         </span>
         <hr />
       </div>
