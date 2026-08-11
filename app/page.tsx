@@ -46,7 +46,7 @@ export default function Page() {
         </div>
         <div className="w-full md:w-2/3 rounded-2xl">
             <Image
-              src="/me-monochrome.png"
+              src="/me-monochrome.webp"
               alt="Profile picture"
               className="mb-4 w-full opacity-50 rounded-2xl"
               width={200}
