@@ -19,10 +19,10 @@ export default function Page() {
               And i am a red devil
               <span>
                 <Image
-                  src="manchester_united.png"
+                  src="manchester_united.webp"
                   alt="Manchester United"
                   width={20}
-                  height={20}
+                  height={20}cwebp -q 80 input.png -o output.webp   
                 />
               </span>
             </p>
