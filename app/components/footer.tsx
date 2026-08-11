@@ -2,6 +2,7 @@ import {
   GitHubLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
+  FileIcon,
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
@@ -14,18 +15,25 @@ export default function Footer() {
         }
       >
         <span className="dark:bg-black px-5 position: relative -bottom-1.5 transition-colors duration-200 inline-flex items-center gap-2">
-            <span className="inline-block rotate-180 relative ">➢</span>
+          <span className="inline-block rotate-180 relative ">➢</span>
           <div>✵</div>
-          <div
-            className=" inline-block  relative "
-          >
-            ➢
-          </div>
+          <div className=" inline-block  relative ">➢</div>
         </span>
         <hr />
       </div>
       <div className="mb-2 flex justify-between">
-        <ul className="font-sm flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        <ul className="flex flex-col justify-between gap-6">
+          <li>
+            <Link
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:underline"
+            >
+              <FileIcon className="inline-block size-5" />
+              Resume
+            </Link>
+          </li>
           <li>
             <Link
               href="https://github.com/kofi-kusi"
@@ -37,6 +45,9 @@ export default function Footer() {
               GitHub
             </Link>
           </li>
+        </ul>
+
+        <ul className="flex flex-col justify-between gap-6">
           <li>
             <Link
               href="https://www.linkedin.com/in/kofi-kusi/"
